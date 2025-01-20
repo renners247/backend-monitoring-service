@@ -1,4 +1,4 @@
-name: Lendoverify
+name: Monitoring service
 on:
   push:
     branches:
