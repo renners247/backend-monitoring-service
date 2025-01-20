@@ -11,7 +11,6 @@ EXPOSE 9200
 COPY logstash.conf /usr/share/logstash/pipeline/logstash.conf
 
 # Restart Logstash on container changes
-COPY /usr/sbin/cron /usr/sbin/cron
 RUN echo "* * * * * /sbin/restart logstash" >> /etc/crontab
 
 # Expose port 9600 (mapped to 6000 in the YAML config)
